@@ -1,25 +1,30 @@
-import React, { useState } from 'react'
-import {AppBar, Switch, Toolbar, Typography} from "@mui/material"
+import React, { useState } from "react";
+import { AppBar, Switch, Toolbar, Typography, Box } from "@mui/material";
 
+const NavBar = ({ toggleDarkMode }) => {
+  const [darkMode, setDarkMode] = useState(false);
 
-const NavBar = ({toggleDarkMode}) => {
-    const [darkMode, setDarkMode] = useState(false)
+  const handleToggleMode = () => {
+    setDarkMode(!darkMode);
+    toggleDarkMode(); 
+  };
 
-    const handleToggleMode=()=>{
-        setDarkMode(!darkMode)
-        toggleDarkMode()
-    }
   return (
-    <AppBar>
-        <Toolbar>
-            <Typography>
-                USER MANAGEMENT APP
-            </Typography>
-            <Switch checked={darkMode} onChange={handleToggleMode} />
-            <Typography>{darkMode ? "Dark Mode" : "Light Mode"}</Typography>
-        </Toolbar>
+    <AppBar position="sticky" sx={{ backgroundColor: darkMode ? "#333" : "#1976d2" }}>
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          USER MANAGEMENT APP
+        </Typography>
+        
+        <Box display="flex" alignItems="center" gap={1}>
+          <Typography variant="body1" color="inherit">
+            {darkMode ? "Dark Mode" : "Light Mode"}
+          </Typography>
+          <Switch checked={darkMode} onChange={handleToggleMode} />
+        </Box>
+      </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
