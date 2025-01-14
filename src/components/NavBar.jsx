@@ -11,8 +11,8 @@ const NavBar = ({ toggleDarkMode }) => {
 
   return (
     <AppBar position="sticky" sx={{ backgroundColor: darkMode ? "#333" : "#1976d2" }}>
-      <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+      <Toolbar sx={{backgroundColor:"#a28089"}}>
+        <Typography variant="h6" sx={{ flexGrow: 1, textAlign:"center"}}>
           USER MANAGEMENT APP
         </Typography>
         
