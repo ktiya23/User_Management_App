@@ -2,6 +2,8 @@
 
 This is a User Management application built using React and Material-UI. The application allows users to view a list of users, search, sort by name, and view detailed information about individual users. It also includes a light/dark mode toggle feature.
 
+**Deployed Link** - https://grand-mermaid-187941.netlify.app/
+
 ## Features
 
 - User Listing: Displays a list of users fetched from an external API.
