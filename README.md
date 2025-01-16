@@ -24,7 +24,7 @@ This is a User Management application built using React and Material-UI. The app
 
 **Prerequisites**
 
-- Make sure you have Node.js installed. You can download it from here.
+- Make sure you have installed react , materual UI , react-router-dom for building user managment app.
 
 **Steps**
 
